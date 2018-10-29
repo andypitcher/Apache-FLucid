@@ -25,4 +25,4 @@ Exemple of Forensic Lucid Observation :
 observation access_o_30 = ([src-ip:"172.16.16.4" , access-date:"05/Mar/2018:19:32:17" , timezone:"0500" , http-identd:"-" , http-userid:"-" , http-method:"GET" , http-path:"/theme/eldy/img/tick.png" , http-protocol:"HTTP/1.1" , http-code:"200" , object-size:"980" , http-referer:"http://example.com/install/check.php" , user-agent:"Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0"] 1 , 0 , 1 . 0 ,"05/Mar/2018:19:32:17" 
 ```
 
-
+See the paper related, which has been submitted to Memocode18 for reviews: [Apache-FLucid-Paper](MEMOCODE18_paper_32.pdf)
