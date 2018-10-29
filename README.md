@@ -1,11 +1,17 @@
 # Apache-FLucid
 
-This implmentation is based on : https://arxiv.org/abs/0904.3789
+This impelmentation is based on : https://arxiv.org/abs/0904.3789
 
-apache_flucid_encoder is a simple program to turn Apache access logs into Forensic Lucid
+**apache_flucid_encoder** is a simple program to turn Apache access logs into Forensic Lucid observations.
+As Apache rotatelog, it is made to be run as a piped log program: https://httpd.apache.org/docs/2.4/en/programs/rotatelogs.html
 
-Conversion can be done statically, by passing a LogFile formated in httpd.conf as below:
-LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
+
+- Conversion can be done statically, by passing a LogFile formated in httpd.conf as below:
+*LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined*
+
+- Conversion can be done dynamically, by using the piped log option with Apache in httpd.conf as below (wip):
+ *CustomLog "|/usr/sbin/apache_flucid_encoder -D" combined*
+ 
 
 Exemple of Raw access log:
 ```
