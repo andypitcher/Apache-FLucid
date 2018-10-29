@@ -80,8 +80,6 @@ int main(int argc, char *argv[])
 struct ApacheLog Log[8000];
   while(fgets(line, sizeof(line), logs) != NULL)
   {
-//	printf("%s",line);
-//	collect_flucid_obs(Log[i],line,i);
 	scanresult = sscanf( line, "%s %s %s [%s -%d] \"%s %s %[HTTP/1.0-1]\" %d %d %s %[^\t\n]", Log[i].ip, Log[i].identd, Log[i].userid, Log[i].date, &Log[i].date_zone, Log[i].method, Log[i].http_path, Log[i].http_protocol, &Log[i].http_code, &Log[i].object_size, Log[i].http_referer, Log[i].user_agent);
         lines_count++;
 	i ++;
@@ -105,26 +103,8 @@ return 0;
 void collect_flucid_obs( char line[],int i){
   
 int scanresult;
-//int i=1;
-//char line [1000];
 int lines_count;
 
-//printf("%s",line);
-//while ((fscanf(logs, "%[^\n]", line)) != EOF)
-//  {
-//   fgetc(logs);
-//For each line we use the below regex to read through and assign each attributes to the given struct array  
-//   scanresult = sscanf( line, "%s %s %s [%s -%d] \"%s %s %[HTTP/1.0-1]\" %d %d %s %[^\t\n]", Log[i].ip, Log[i].identd, Log[i].userid, Log[i].date, &Log[i].date_zone, Log[i].method, Log[i].http_path, Log[i].http_protocol, &Log[i].http_code, &Log[i].object_size, Log[i].http_referer, Log[i].user_agent);
-//   if ( scanresult != 13 ) {
-
-//Call the display_flucid_obs fct with the current struct defined by i
-
-  //} else {
-  //  printf( "Bad Log format provided\n" );
- // }
- // i++;
-//}
-//fclose(logs);
 }
 
 //Definition of fct display_flucid_obs which prints the apache log line to flucid observation
